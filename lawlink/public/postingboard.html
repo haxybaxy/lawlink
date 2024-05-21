@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Posting Board</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .sticky-top {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <nav class="bg-yellow-900 shadow-md sticky-top">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-white">Law Project</a>
+      <div class="flex space-x-4 items-center flex-grow justify-center">
+        <a href="index.html" class="text-white hover:text-gray-200">Home</a>
+        <a href="postingboard.html" class="text-white hover:text-gray-200">Posting Board</a>
+        <a href="lawyerlistings.html" class="text-white hover:text-gray-200">Lawyer Listings</a>
+        <a href="resources.html" class="text-white hover:text-gray-200">Resources</a>
+        <a href="support.html" class="text-white hover:text-gray-200">Support/FAQ</a>
+      </div>
+      <a href="login.html" class="bg-white text-yellow-800 px-4 py-2 rounded hover:bg-gray-100">Log In</a>
+    </div>
+  </nav>
+
+    <!-- Title Section -->
+    <div class="container mx-auto px-8 py-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Posting Board</h1>
+    </div>
+
+    <!-- Separator -->
+    <hr class="border-t border-gray-300 mx-8 mb-8">
+
+  <!-- Posting Board -->
+  <div class="container mx-auto px-4 py-8 flex-grow">
+    <!-- View Posts Section -->
+    <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Recent Posts</h2>
+      <!-- Sample Post -->
+      <div class="border-b border-gray-200 py-4">
+        <a href="#" class="text-blue-500 hover:underline font-semibold">Post Title</a>
+        <p class="text-gray-600">Posted by <span class="font-semibold">User123</span> on <span class="font-semibold">May 19, 2024</span></p>
+      </div>
+      <div class="border-b border-gray-200 py-4">
+        <a href="#" class="text-blue-500 hover:underline font-semibold">Post Title</a>
+        <p class="text-gray-600">Posted by <span class="font-semibold">User124</span> on <span class="font-semibold">May 19, 2024</span></p>
+      </div>
+      <div class="border-b border-gray-200 py-4">
+        <a href="#" class="text-blue-500 hover:underline font-semibold">Post Title</a>
+        <p class="text-gray-600">Posted by <span class="font-semibold">User125</span> on <span class="font-semibold">May 19, 2024</span></p>
+      </div>
+      <div class="border-b border-gray-200 py-4">
+        <a href="#" class="text-blue-500 hover:underline font-semibold">Post Title</a>
+        <p class="text-gray-600">Posted by <span class="font-semibold">User126</span> on <span class="font-semibold">May 19, 2024</span></p>
+      </div>
+      <!-- Sample Posts End -->
+      <!-- Include more posts here -->
+    </div>
+
+    <!-- Button to Make a New Post -->
+    <button id="newPostBtn" class="bg-yellow-800 text-white px-4 py-2 rounded hover:bg-yellow-700">Make a New Post</button>
+  </div>
+
+  <!-- Modal for New Post Form -->
+  <div id="newPostModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">New Post</h2>
+      <form>
+        <div class="mb-4">
+          <label for="postTitle" class="block text-gray-700 text-sm font-bold mb-2">Title</label>
+          <input type="text" id="postTitle" name="postTitle" class="border rounded w-full py-2 px-3 text-gray-700" />
+        </div>
+        <div class="mb-4">
+          <label for="postContent" class="block text-gray-700 text-sm font-bold mb-2">Content</label>
+          <textarea id="postContent" name="postContent" rows="4" class="border rounded w-full py-2 px-3 text-gray-700"></textarea>
+        </div>
+        <button type="submit" class="bg-yellow-800 text-white px-4 py-2 rounded hover:bg-yellow-700">Submit</button>
+        <button type="button" id="closeModalBtn" class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300 ml-4">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2024 Law Project. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const newPostBtn = document.getElementById('newPostBtn');
+    const newPostModal = document.getElementById('newPostModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+
+    // Show modal when "Make a New Post" button is clicked
+    newPostBtn.addEventListener('click', () => {
+      newPostModal.classList.remove('hidden');
+    });
+
+    // Close modal when "Cancel" button is clicked
+    closeModalBtn.addEventListener('click', () => {
+      newPostModal.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
