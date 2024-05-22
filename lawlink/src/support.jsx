@@ -1,8 +1,11 @@
 import React from 'react';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 const Support = () => {
   return (
     <div className="bg-gray-100 flex flex-col min-h-screen">
+      <NavBar />
 
       {/* Title Section */}
       <div className="container mx-auto px-8 py-8">
@@ -54,7 +57,7 @@ const Support = () => {
           </div>
         </div>
       </main>
-
+      <Footer />
     </div>
   );
 };

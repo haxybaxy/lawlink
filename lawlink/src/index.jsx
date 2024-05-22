@@ -5,14 +5,13 @@ import Footer from './components/Footer';
 
 const Index = () => {
   return (      
-    <main className="container mx-auto px-4 py-8 flex-grow">
+    <main className="bg-gray-100 flex flex-col min-h-screen">
       <NavBar />
 
       <div className="bg-cover bg-center h-64 flex items-center justify-center" style={{ backgroundImage: 'url(hammer.webp)' }}>
         <h2 className="text-3xl font-bold text-white">Welcome to the Lawlink</h2>
       </div>
-
-
+      
       {/* Title Section */}
       <div className="container mx-auto px-8 py-8">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">Services</h1>
@@ -47,7 +46,7 @@ const Index = () => {
               <p className="text-gray-600">Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
             </div>
           </div>
-          <div className="w-full px-4">
+          <div className="w-full px-4 mb-6">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Post Your Requests</h3>
               <p className="text-gray-600">Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
