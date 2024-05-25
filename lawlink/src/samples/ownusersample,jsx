@@ -1,0 +1,28 @@
+const userSample = {
+  username: 'Benutzer123',
+  name: 'John Doe',
+  profilePhoto: 'https://example.com/photo.jpg',
+  paymentMethod: 'Credit Card',
+  recentPosts: [
+    { title: 'First Post', date: 'May 19, 2024' },
+    { title: 'Second Post', date: 'May 20, 2024' },
+  ],
+  recentComments: [
+    { content: 'Nice post!', date: 'May 21, 2024' },
+    { content: 'Thanks for sharing!', date: 'May 22, 2024' },
+  ],
+  inbox: [
+    {
+    sender: "Benutzer456",
+    content: "Könnten Sie mir bitte bei meinem Fall helfen?",
+    date: "22. Mai 2024"
+    },
+    {
+    sender: "Benutzer789",
+    content: "Ich habe eine Frage zu Ihrem letzten Beitrag.",
+    date: "20. Mai 2024"
+    }
+  ]
+};
+
+export default userSample;

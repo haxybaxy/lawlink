@@ -10,7 +10,7 @@ const LawyerListings = () => {
 
       {/* Title Section */}
       <div className="container mx-auto px-8 py-8">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">Lawyer Listings</h1>
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">Anwaltsverzeichnis</h1>
       </div>
 
       {/* Separator */}
@@ -20,17 +20,17 @@ const LawyerListings = () => {
       <div className="container mx-auto px-4 flex-grow flex">
         {/* Search Section */}
         <div className="w-1/4 p-6 rounded-lg mr-4">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Search for Lawyers</h3>
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">Suche nach Anwälten</h3>
           <div className="mb-4">
-            <input type="text" placeholder="Specialty" id="specialty" className="border rounded w-full py-2 px-3 text-gray-700" />
+            <input type="text" placeholder="Spezialität" id="specialty" className="border rounded w-full py-2 px-3 text-gray-700" />
           </div>
           <div className="mb-4">
-            <input type="text" placeholder="Area" id="area" className="border rounded w-full py-2 px-3 text-gray-700" />
+            <input type="text" placeholder="Bereich" id="area" className="border rounded w-full py-2 px-3 text-gray-700" />
           </div>
           <div className="mb-4">
-            <input type="text" placeholder="Price" id="price" className="border rounded w-full py-2 px-3 text-gray-700" />
+            <input type="text" placeholder="Preis" id="price" className="border rounded w-full py-2 px-3 text-gray-700" />
           </div>
-          <button id="searchBtn" className="bg-yellow-800 text-white px-4 py-2 rounded hover:bg-yellow-700">Search</button>
+          <button id="searchBtn" className="bg-yellow-800 text-white px-4 py-2 rounded hover:bg-yellow-700">Suche</button>
         </div>
 
         {/* Separator */}
@@ -38,9 +38,9 @@ const LawyerListings = () => {
 
         {/* Results Section */}
         <div className="w-2/4 p-6 rounded-lg">
-          <h4 className="text-xl font-bold text-gray-800 mb-4">Results</h4>
+          <h4 className="text-xl font-bold text-gray-800 mb-4">Ergebnisse</h4>
           <div id="results">
-            {/* Search results will be displayed here */}
+            {/* Suchergebnisse werden hier angezeigt */}
           </div>
         </div>
       </div>
